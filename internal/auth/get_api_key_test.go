@@ -55,7 +55,6 @@ func TestAuthKeyMalformed(t *testing.T) {
 		t.Fatalf("error should be malformed error, error returned: %s", err.Error())
 
 	}
-	t.Fatalf("temp fail for ci check")
 
 }
 
