@@ -40,9 +40,9 @@ func TestAuthKeyNoHeader(t *testing.T) {
 func TestAuthKeyMalformed(t *testing.T) {
 
 	hash, _ := generateRandomSHA256Hash()
-	expected := fmt.Sprintf("%s", hash)
+
 	testRequest := httptest.NewRequest("GET", "/test", nil)
-	testRequest.Header.Set("Authorization", expected)
+	testRequest.Header.Set("Authorization", hash)
 
 	_, err := GetAPIKey(testRequest.Header)
 
